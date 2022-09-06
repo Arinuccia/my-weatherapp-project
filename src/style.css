@@ -1,0 +1,81 @@
+#search-text-input {
+  border-radius: 15px;
+  border-color: #5a6aca;
+  padding-left: 10px;
+  font-style: italic;
+  color: darkslateblue;
+}
+#farhenheit-temp {
+  text-decoration: none;
+  color: inherit;
+  transition: all 500ms ease-in-out;
+  font-size: 20px;
+  font-weight: bold;
+}
+#celsius-temp {
+  text-decoration: none;
+  color: inherit;
+  transition: all 500ms ease-in-out;
+  font-size: 20px;
+  font-weight: bold;
+}
+#current-hour {
+  font-weight: lighter;
+}
+.container {
+  color: #5a6aca;
+}
+
+.border {
+  border: 1px solid #5a6aca;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.current-position-button {
+  border-radius: 15px;
+  border-color: #5a6aca;
+  padding-left: 10px;
+  background-color: #fff;
+  color: darkslateblue;
+  transition: all 360ms ease-in-out;
+  display: block;
+  margin: 5px;
+}
+.current-position-button:hover {
+  background-color: #5a6aca;
+  color: #fff;
+}
+.more-info.left {
+  list-style: none;
+  margin-left: -33px;
+}
+.more-info.right {
+  list-style: none;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  font-size: 23px;
+  margin-top: -40px;
+}
+
+.temperature {
+  text-align: center;
+}
+.emoji {
+  text-align: center;
+}
+
+.city {
+  font-weight: lighter;
+  font-style: italic;
+}
+#farhenheit-temp:hover {
+  color: darkslateblue;
+}
+#celsius-temp:hover {
+  color: darkslateblue;
+}
