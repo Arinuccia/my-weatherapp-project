@@ -9,9 +9,8 @@ h2 {
 #search-text-input {
   border-radius: 15px;
   border-color: transparent;
-  margin: 20px;
-  margin-right: -15px;
-  margin-left: 390px;
+  margin: 20px auto;
+
   font-style: italic;
   color: darkslateblue;
   padding-right: 40px;
