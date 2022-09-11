@@ -1,52 +1,61 @@
+body {
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: #fff;
+}
+h2 {
+  font-size: 65px;
+  margin-bottom: 50px;
+}
 #search-text-input {
   border-radius: 15px;
-  border-color: #5a6aca;
-  padding-left: 10px;
+  border-color: transparent;
+  margin: 20px;
+  margin-right: -15px;
+  margin-left: 390px;
   font-style: italic;
   color: darkslateblue;
+  padding-right: 40px;
+  padding-left: 7px;
 }
+
 #farhenheit-temp {
   text-decoration: none;
-  color: inherit;
+  color: #112d4e;
   transition: all 500ms ease-in-out;
-  font-size: 20px;
+  font-size: 27px;
   font-weight: bold;
 }
 #celsius-temp {
   text-decoration: none;
-  color: inherit;
+  color: #112d4e;
   transition: all 500ms ease-in-out;
-  font-size: 20px;
+  font-size: 27px;
   font-weight: bold;
 }
 #current-hour {
   font-weight: lighter;
 }
-.container {
-  color: #5a6aca;
-}
 
-.border {
-  border: 1px solid #5a6aca;
-  padding: 15px;
-  margin: 20px auto;
-  max-width: 600px;
+.search-button {
   border-radius: 10px;
+  border-color: transparent;
+  background-color: #fff;
+  color: #112d4e;
+  margin: 20px 30px;
 }
-
 .current-position-button {
   border-radius: 15px;
-  border-color: #5a6aca;
-  padding-left: 10px;
+  border-color: transparent;
+  padding-left: 5px;
   background-color: #fff;
   color: darkslateblue;
   transition: all 360ms ease-in-out;
-  display: block;
-  margin: 5px;
+
+  margin-left: 140px;
 }
 .current-position-button:hover {
-  background-color: #5a6aca;
-  color: #fff;
+  background-color: #09203f;
+  cursor: pointer;
 }
 .more-info.left {
   list-style: none;
@@ -54,14 +63,12 @@
 }
 .more-info.right {
   list-style: none;
-  text-align: center;
+  line-height: 24px;
   font-size: 20px;
   font-weight: bold;
-  line-height: 22px;
-  font-size: 23px;
-  margin-top: -40px;
-}
 
+  font-size: 23px;
+}
 .temperature {
   text-align: center;
 }
@@ -70,6 +77,7 @@
 }
 
 .city {
+  margin-bottom: 80px;
   font-weight: lighter;
   font-style: italic;
 }
