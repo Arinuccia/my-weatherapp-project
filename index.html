@@ -5,83 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Weather app</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="border">
-        <form id="search-form">
-          <input
-            type="text"
-            placeholder="Type a city..."
-            autofocus="on"
-            autocomplete="off"
-            id="search-text-input"
-          />
+      <form id="search-form">
+        <input
+          type="text"
+          placeholder="Type a city..."
+          autofocus="on"
+          autocomplete="off"
+          id="search-text-input"
+        />
 
-          <input type="submit" value="Search" class="search-button" />
+        <input type="submit" value="Search" class="search-button" />
+      </form>
+      <button class="current-position-button">📍</button>
+      <h1 class="city"></h1>
 
-          <button class="current-position-button">My current location</button>
-        </form>
-
-        <h2 id="current-temp"></h2>
-
-        <a href="#" id="celsius-temp">°C |</a>
-        <a href="#" id="farhenheit-temp">°F</a>
-        <div class="description"></div>
-
-        <div class="row">
-          <div class="col-6">
-            <ul class="more-info left">
-              <li id="precipitation"></li>
-              <li>Humidity:<span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>km/h</li>
-            </ul>
-          </div>
-
-          <div class="col-6">
-            <ul class="more-info right">
-              <li id="current-date"></li>
-              <li id="current-hour"></li>
-              <li class="city"></li>
-            </ul>
+      <div class="row">
+        <div class="col-6">
+          <div class="d-flex weather-temperature">
+            <h2 id="current-temp"></h2>
+            <span class="units">
+              <a href="#" id="celsius-temp">°C |</a>
+              <a href="#" id="farhenheit-temp">°F</a></span
+            >
           </div>
         </div>
 
-        <div class="row">
-          <div class="col date">Tuesday,9th</div>
-
-          <div class="col date">Wednesday,10th</div>
-
-          <div class="col date">Thursday,11th</div>
-
-          <div class="col date">Friday,12th</div>
-
-          <div class="col date">Saturday,13th</div>
-        </div>
-
-        <div class="row">
-          <div class="col emoji">🌥</div>
-          <div class="col emoji">🌥</div>
-          <div class="col emoji">🌥</div>
-          <div class="col emoji">🌥</div>
-          <div class="col emoji">🌥</div>
-        </div>
-
-        <div class="row">
-          <div class="col temperature"><strong>27 °/</strong> 14 °</div>
-          <div class="col temperature"><strong> 29 °/</strong> 15 °</div>
-          <div class="col temperature"><strong>31 °/</strong> 16 °</div>
-          <div class="col temperature"><strong>31 °/</strong> 18 °</div>
-          <div class="col temperature"><strong> 32 °/ </strong>19 °</div>
+        <div class="col-6">
+          <ul class="more-info left">
+            <li class="description"></li>
+            <li id="precipitation"></li>
+            <li>Humidity:<span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span>km/h</li>
+          </ul>
         </div>
       </div>
+      <div class="row">
+        <div class="col-6 date">Tuesday,9th</div>
+        <div class="col-6 temperature"><strong>27 °/</strong> 14 °</div>
+        <div class="col-6 date">Wednesday,10th</div>
+        <div class="col-6 temperature"><strong> 29 °/</strong> 15 °</div>
+        <div class="col-6 date">Thursday,11th</div>
+
+        <div class="col-6 temperature"><strong>31 °/</strong> 16 °</div>
+        <div class="col-6 date">Friday,12th</div>
+
+        <div class="col-6 temperature"><strong>31 °/</strong> 18 °</div>
+        <div class="col-6 date">Saturday,13th</div>
+        <div class="col-6 temperature"><strong> 32 °/ </strong>19 °</div>
+      </div>
+
       <a href="https://github.com/Arinuccia/my-weatherapp-project"
         >Open-source code</a
       >
