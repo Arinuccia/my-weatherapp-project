@@ -1,38 +1,3 @@
-let now = new Date();
-let changeHour = document.querySelector("#current-hour");
-let changeDate = document.querySelector("#current-date");
-let date = now.getDate();
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let month = months[now.getMonth()];
-changeHour.innerHTML = `${day},${hours}:${minutes} `;
-changeDate.innerHTML = `${month},${date}th`;
-
 function showTemperature(response) {
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
