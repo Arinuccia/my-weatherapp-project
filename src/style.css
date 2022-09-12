@@ -22,7 +22,12 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+.units {
+  color: #112d4e;
 
+  font-size: 27px;
+  font-weight: bold;
+}
 #farhenheit-temp {
   text-decoration: none;
   color: #112d4e;
@@ -91,4 +96,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 #celsius-temp:hover {
   color: darkslateblue;
+}
+.description:first-letter {
+  text-transform: capitalize;
 }
