@@ -7,6 +7,7 @@ function showTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  celsiusTemperature = response.data.main.temp;
 }
 function search(city) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
@@ -35,15 +36,16 @@ function getPosition(event) {
 
 function changeCelsius(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#current-temp");
-  temperature.innerHTML = Math.round(((temperature.innerHTML - 32) * 5) / 9);
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 function changeFarhenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#current-temp");
-  temperature.innerHTML = Math.round((temperature.innerHTML * 9) / 5 + 32);
+  let temperatureElement = document.querySelector("#current-temp");
+  let farhenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farhenheitTemperature);
 }
-
+let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCityWeather);
 
