@@ -28,10 +28,9 @@
       <button class="current-position-button">📍</button>
       <h1 class="city"></h1>
 
-      <img id="weather-img" src="" alt="" />
-
       <div class="row">
-        <div class="col-6">
+        <div class="col-3"><img id="weather-img" src="" alt="" /></div>
+        <div class="col-3">
           <div class="d-flex weather-temperature">
             <h2 id="current-temp"></h2>
             <span class="units">
@@ -43,28 +42,14 @@
 
         <div class="col-6">
           <ul class="more-info left">
-            <li class="description"></li>
             <li id="precipitation"></li>
             <li>Humidity:<span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span>km/h</li>
           </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="col-6 date">Tuesday,9th</div>
-        <div class="col-6 temperature"><strong>27 °/</strong> 14 °</div>
-        <div class="col-6 date">Wednesday,10th</div>
-        <div class="col-6 temperature"><strong> 29 °/</strong> 15 °</div>
-        <div class="col-6 date">Thursday,11th</div>
-
-        <div class="col-6 temperature"><strong>31 °/</strong> 16 °</div>
-        <div class="col-6 date">Friday,12th</div>
-
-        <div class="col-6 temperature"><strong>31 °/</strong> 18 °</div>
-        <div class="col-6 date">Saturday,13th</div>
-        <div class="col-6 temperature"><strong> 32 °/ </strong>19 °</div>
-      </div>
-
+      <div class="description"></div>
+      <div class="weather-forecast" id="forecast"></div>
       <a href="https://github.com/Arinuccia/my-weatherapp-project"
         >Open-source code</a
       >
