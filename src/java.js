@@ -71,8 +71,35 @@ function showTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  if (
+    response.data.weather[0].description == "clear sky" ||
+    response.data.weather[0].description == "few clouds"
+  ) {
+    document.body.style.background =
+      "radial-gradient(circle at 10% 20%, rgb(149, 219, 254) 0%, rgb(7, 134, 197) 90.1%)";
+  }
+  if (
+    response.data.weather[0].description == "scattered clouds" ||
+    response.data.weather[0].description == "broken clouds" ||
+    response.data.weather[0].description == "mist"
+  ) {
+    document.body.style.background =
+      "linear-gradient(to right, #d7d2cc 0%, #304352 100%)";
+  }
+  if (
+    response.data.weather[0].description == "shower rain" ||
+    response.data.weather[0].description == "rain" ||
+    response.data.weather[0].description == "thunderstorm"
+  ) {
+    document.body.style.background =
+      "linear-gradient(to top, #09203f 0%, #537895 100%)";
+  }
 
-  celsiusTemperature = response.data.main.temp;
+  if (response.data.weather[0].description == "snow") {
+    document.body.style.background =
+      "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)";
+  }
+
   let weatherIcon = document.querySelector("#weather-img");
   weatherIcon.setAttribute(
     "src",
@@ -106,28 +133,10 @@ function getPosition(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-function changeCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-function changeFarhenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  let farhenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farhenheitTemperature);
-}
-let celsiusTemperature = null;
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchCityWeather);
-
 let currentPositionButton = document.querySelector("button");
 currentPositionButton.addEventListener("click", getPosition);
 
-let celsius = document.querySelector("#celsius-temp");
-celsius.addEventListener("click", changeCelsius);
-
-let farhenheit = document.querySelector("#farhenheit-temp");
-farhenheit.addEventListener("click", changeFarhenheit);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCityWeather);
 
 search("New York");
