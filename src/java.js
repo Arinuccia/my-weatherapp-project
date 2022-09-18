@@ -57,15 +57,18 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
+
 function showTemperature(response) {
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("h2").innerHTML = Math.round(response.data.main.temp);
   document.querySelector(".city").innerHTML = response.data.name;
+  document.querySelector(".country").innerHTML = response.data.sys.country;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
   celsiusTemperature = response.data.main.temp;
   let weatherIcon = document.querySelector("#weather-img");
   weatherIcon.setAttribute(

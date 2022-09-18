@@ -22,11 +22,11 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
-.units {
-  color: #112d4e;
 
+.units {
   font-size: 27px;
   font-weight: bold;
+  color: #112d4e;
 }
 #farhenheit-temp {
   text-decoration: none;
@@ -41,9 +41,6 @@ input[type="search"]::-webkit-search-results-decoration {
   transition: all 500ms ease-in-out;
   font-size: 27px;
   font-weight: bold;
-}
-#current-hour {
-  font-weight: lighter;
 }
 
 .search-button {
@@ -79,17 +76,20 @@ input[type="search"]::-webkit-search-results-decoration {
 
   font-size: 23px;
 }
-.temperature {
-  text-align: center;
-}
-.emoji {
-  text-align: center;
-}
 
 .city {
-  margin-bottom: 80px;
-  font-weight: lighter;
+  display: inline;
+  font-weight: 200;
   font-style: italic;
+  font-size: 27px;
+  list-style: none;
+}
+.country {
+  display: inline;
+  font-weight: 300;
+  font-size: 27px;
+  font-style: italic;
+  list-style: none;
 }
 #farhenheit-temp:hover {
   color: darkslateblue;
