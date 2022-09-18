@@ -64,6 +64,9 @@ function showTemperature(response) {
   document.querySelector("h2").innerHTML = Math.round(response.data.main.temp);
   document.querySelector(".city").innerHTML = response.data.name;
   document.querySelector(".country").innerHTML = response.data.sys.country;
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed

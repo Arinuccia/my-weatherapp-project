@@ -16,25 +16,32 @@
   </head>
   <body>
     <div class="container">
-      <form id="search-form">
-        <input
-          type="search"
-          placeholder="Type a city..."
-          autofocus="on"
-          autocomplete="off"
-          id="search-text-input"
-        />
-      </form>
-      <button class="current-position-button">📍</button>
+      <ul>
+        <li class="current-position">
+          <form id="search-form">
+            <input
+              type="search"
+              placeholder="Type a city..."
+              autofocus="on"
+              autocomplete="off"
+              id="search-text-input"
+            />
+          </form>
+        </li>
+        <li class="current-position">
+          <button class="current-position-button">📍</button>
+        </li>
+      </ul>
       <ul>
         <li class="city"></li>
         ,
         <li class="country"></li>
       </ul>
       <div class="row">
-        <div class="col-3"><img id="weather-img" src="" alt="" /></div>
-        <div class="col-3">
+        <div class="col-6">
           <div class="d-flex weather-temperature">
+            <img id="weather-img" src="" alt="" />
+
             <h2 id="current-temp"></h2>
             <span class="units">
               <a href="#" id="celsius-temp">°C</a> |
@@ -42,18 +49,17 @@
             >
           </div>
         </div>
-
         <div class="col-6">
           <ul class="more-info left">
-            <li id="precipitation"></li>
-            <li>Humidity:<span id="humidity"></span>%</li>
+            <li>Feels like: <span id="feels-like"></span>°C</li>
+            <li>Humidity: <span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span>km/h</li>
           </ul>
         </div>
       </div>
       <div class="description"></div>
       <div class="weather-forecast" id="forecast"></div>
-      <span class="hovertext" data-hover=""></span>
+
       <a href="https://github.com/Arinuccia/my-weatherapp-project"
         >Open-source code</a
       >
