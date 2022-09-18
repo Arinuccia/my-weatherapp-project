@@ -7,22 +7,7 @@ h2 {
   font-weight: 200;
   margin-bottom: 50px;
 }
-.src-code {
-  font-weight: 300;
-  font-size: 14px;
-  display: block;
-  padding: 30px;
-  text-align: right;
-}
-#search-text-input {
-  border-radius: 15px;
-  border-color: transparent;
-  margin: 10px auto;
-  padding-right: 40px;
-  padding-left: 7px;
-  font-style: italic;
-  color: darkslateblue;
-}
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -30,12 +15,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-#celsius-temp {
-  text-decoration: none;
-  color: #fff;
-  font-size: 40px;
-  font-weight: 170;
-}
 .current-position {
   display: inline;
   list-style: none;
@@ -52,20 +31,6 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #09203f;
   cursor: pointer;
 }
-.more-info.left {
-  list-style: none;
-  margin-left: -33px;
-  font-weight: 170;
-  font-size: 20px;
-}
-.more-info.right {
-  list-style: none;
-  line-height: 24px;
-  font-size: 20px;
-  font-weight: bold;
-
-  font-size: 23px;
-}
 
 .city {
   display: inline;
@@ -81,6 +46,20 @@ input[type="search"]::-webkit-search-results-decoration {
   font-style: italic;
   list-style: none;
 }
+.more-info.left {
+  list-style: none;
+  margin-left: -33px;
+  font-weight: 170;
+  font-size: 20px;
+}
+.more-info.right {
+  list-style: none;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: bold;
+
+  font-size: 23px;
+}
 
 .description:first-letter {
   text-transform: capitalize;
@@ -90,17 +69,40 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 200;
   font-style: italic;
 }
+
+.weather-forecast-temperature-min {
+  font-weight: bolder;
+}
+.src-code {
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  padding: 40px;
+  text-align: right;
+}
+#search-text-input {
+  border-radius: 15px;
+  border-color: transparent;
+  margin: 10px auto;
+  padding-right: 40px;
+  padding-left: 7px;
+  font-style: italic;
+  color: darkslateblue;
+}
 #weather-img {
   margin-right: 5px;
   height: 100px;
   width: 100px;
+}
+#celsius-temp {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 170;
 }
 #forecast {
   font-size: 19px;
   font-weight: 200;
   padding: 0px;
   margin: 0 auto;
-}
-.weather-forecast-temperature-min {
-  font-weight: bolder;
 }
