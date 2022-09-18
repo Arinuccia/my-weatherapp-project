@@ -1,16 +1,23 @@
 body {
-  background: linear-gradient(to top, #09203f 0%, #537895 100%);
-  color: #fff;
+  color: rgb(255, 255, 255);
+  margin: 25px auto;
 }
 h2 {
   font-size: 70px;
   font-weight: 200;
   margin-bottom: 50px;
 }
+.src-code {
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  padding: 30px;
+  text-align: right;
+}
 #search-text-input {
   border-radius: 15px;
   border-color: transparent;
-  margin: 20px auto;
+  margin: 10px auto;
   padding-right: 40px;
   padding-left: 7px;
   font-style: italic;
@@ -23,24 +30,11 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-.units {
-  font-size: 27px;
-  font-weight: bold;
-  color: #112d4e;
-}
-#farhenheit-temp {
-  text-decoration: none;
-  color: #112d4e;
-  transition: all 500ms ease-in-out;
-  font-size: 27px;
-  font-weight: bold;
-}
 #celsius-temp {
   text-decoration: none;
-  color: #112d4e;
-  transition: all 500ms ease-in-out;
-  font-size: 27px;
-  font-weight: bold;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 170;
 }
 .current-position {
   display: inline;
@@ -61,6 +55,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .more-info.left {
   list-style: none;
   margin-left: -33px;
+  font-weight: 170;
+  font-size: 20px;
 }
 .more-info.right {
   list-style: none;
@@ -85,12 +81,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-style: italic;
   list-style: none;
 }
-#farhenheit-temp:hover {
-  color: darkslateblue;
-}
-#celsius-temp:hover {
-  color: darkslateblue;
-}
+
 .description:first-letter {
   text-transform: capitalize;
 }
@@ -103,4 +94,13 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-right: 5px;
   height: 100px;
   width: 100px;
+}
+#forecast {
+  font-size: 19px;
+  font-weight: 200;
+  padding: 0px;
+  margin: 0 auto;
+}
+.weather-forecast-temperature-min {
+  font-weight: bolder;
 }
