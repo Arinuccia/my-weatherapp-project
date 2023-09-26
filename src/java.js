@@ -82,7 +82,8 @@ function showTemperature(response) {
     response.data.weather[0].description == "scattered clouds" ||
     response.data.weather[0].description == "broken clouds" ||
     response.data.weather[0].description == "mist" ||
-    response.data.weather[0].description == "light rain"
+    response.data.weather[0].description == "light rain" ||
+    response.data.weather[0].description == "overcast clouds"
   ) {
     document.body.style.background =
       "linear-gradient(to right, #d7d2cc 0%, #304352 100%)";
